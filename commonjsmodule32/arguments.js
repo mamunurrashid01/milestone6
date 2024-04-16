@@ -35,3 +35,22 @@ function refer(a, b) {
 console.log(student1);
 console.log(refer(student1, student2));
 console.log(student1);
+
+function grandParant() {
+  let house = "Green House";
+
+  function parent() {
+    let car = "Tesla";
+    house = "YelloHouse";
+    function child() {
+      let scotter = "vespa";
+      console.log("I have: house, car, scotter");
+    }
+    return child;
+  }
+  return parent;
+}
+const res = grandParant();
+console.log(res(child));
+// parent();
+// child();
